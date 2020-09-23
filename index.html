@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Boot Strap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCU2PrMriDuT1hjN7z4HYsZv0RqtKziFMw",
+            authDomain: "chat-app-fa969.firebaseapp.com",
+            databaseURL: "https://chat-app-fa969.firebaseio.com",
+            projectId: "chat-app-fa969",
+            storageBucket: "chat-app-fa969.appspot.com",
+            messagingSenderId: "516813792985",
+            appId: "1:516813792985:web:ff90c1e4e2a4ee268880c8",
+            measurementId: "G-L459R0RK05"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+</head>
+
+<body>
+    <div class=".container-fluid">
+        <!-- navigation -->
+        <nav class="navbar navbar-dark bg-dark">
+            <img class="logo" src="./images/logo-01.png" alt="logo-01 " width="60px">
+            <h1>Chat Application</h1>
+        </nav>
+        <!-- Navigation End -->
+
+
+        <!-- Log In Forms  -->
+        <div class="containerLogin">
+
+            <!-- Log In  -->
+            <div class="logIn">
+                <h4>Already a member?</h4>
+                <br />
+                <input type="email" name="" id="emailLogin" placeholder="E-mail or Username">
+                <br />
+                <input type="Password" name="" id="passwordLogin" placeholder="Password">
+                <br />
+                <br />
+                <button type="button" class="btn btn-primary" onclick="logIn()"><span class="tex">Log In</span></button>
+            </div>
+
+            <!-- Sign Up  -->
+            <div class="signUp">
+                <h4>Signup for Account</h4>
+                <br />
+                <input type="text" name="hidden" id="username" placeholder="Username">
+                <br />
+
+                <input type="email" id="email" placeholder="E-mail">
+                <br />
+
+                <input type="Password" id="password" placeholder="Password">
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="signUp()"><span class="tex">Sign Up</span></button>
+            </div>
+            <!-- Fb Login -->
+            <div class="fblogin">
+                <h4>Log in with Facebook</h4>
+                <br />
+                <button type="button" class="btn btn-primary" onclick="facebookLogin()"><i class="fa fa-facebook"
+                        aria-hidden="true"></i><span class="tex"> Log In</span></button>
+            </div>
+
+        </div>
+        <!-- Log In Forms End  -->
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+    <!-- Boot Strap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
